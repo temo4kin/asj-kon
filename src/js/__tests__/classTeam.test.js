@@ -22,8 +22,20 @@ describe('Validator.validateUsername', () => {
   test('Добавление нескольких персонажей', () => {
     team.addAll(bowman, swordsman, magician, bowman);
     expect(team.members.size).toBe(3);
+  });
+
+  test('Добавление нескольких персонажей', () => {
+    team.addAll(bowman, swordsman, magician, bowman);
     expect(team.members.has(bowman)).toBe(true);
+  });
+
+test('Добавление нескольких персонажей', () => {
+    team.addAll(bowman, swordsman, magician, bowman);
     expect(team.members.has(swordsman)).toBe(true);
+  });
+
+test('Добавление нескольких персонажей', () => {
+    team.addAll(bowman, swordsman, magician, bowman);
     expect(team.members.has(magician)).toBe(true);
   });
 })
