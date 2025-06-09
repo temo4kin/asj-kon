@@ -38,4 +38,9 @@ test('Добавление нескольких персонажей', () => {
     team.addAll(bowman, swordsman, magician, bowman);
     expect(team.members.has(magician)).toBe(true);
   });
+
+  test('Конвертация в массив', () => {
+    const array = team.toArray();
+    expect(Array.isArray(array)).toBeTruthy();
+  })
 })
