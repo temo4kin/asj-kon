@@ -1,5 +1,5 @@
 // TODO: write your code here
-class Team {
+export class Team {
     constructor() {
         this.members = new Set();
     }
@@ -16,12 +16,3 @@ class Team {
         return Array.from(this.members);
     }
 }
-
-const team = new Team();
-team.add('Лучник');
-team.add('Маг');
-team.add('Воин');
-team.add('Маг');
-team.addAll('Мечник', 'Лучник');
-team.addAll('Король', 'Королева');
-console.log(team.toArray());
