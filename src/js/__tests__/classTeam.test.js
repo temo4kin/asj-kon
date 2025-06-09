@@ -3,15 +3,16 @@ import { Team } from '../app.js';
 let team;
 beforeEach(() => {
   team = new Team();
-});
-
-describe('Validator.validateUsername', () => {
   const bowman = 'Лучник';
   const swordsman = 'Мечник';
   const magician = 'Маг';
   
   team.add(swordsman);
   team.add(magician);
+});
+
+describe('Validator.validateUsername', () => {
+  
 
   test('Добавление нового персонажа', () => {
     team.add(bowman);
@@ -25,12 +26,6 @@ describe('Validator.validateUsername', () => {
 })
 
 describe('Validator.validateUsername', () => {
-  const bowman = 'Лучник';
-  const swordsman = 'Мечник';
-  const magician = 'Маг';
-  
-  team.add(swordsman);
-  team.add(magician);
 
   test('Добавление нескольких персонажей', () => {
     team.addAll(bowman, swordsman, magician, bowman);
