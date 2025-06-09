@@ -1,7 +1,7 @@
 import { Team } from '../app.js';
 
 describe('Validator.validateUsername', () => {
-  const team = new Team();
+  let team = new Team();
   const bowman = 'Лучник';
   const swordsman = 'Мечник';
   const magician = 'Маг';
