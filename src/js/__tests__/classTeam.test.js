@@ -1,15 +1,19 @@
 import { Team } from '../app.js';
 
 let team;
-beforeEach(() => {
-  team = new Team();
-});
+const bowman = 'Лучник';
+const swordsman = 'Мечник';
+const magician = 'Маг';
 
-describe('Validator.validateUsername', () => {
-  const bowman = 'Лучник';
-  const swordsman = 'Мечник';
-  const magician = 'Маг';
-  
+// beforeEach(() => {
+//   team = new Team();
+//   team.add(swordsman);
+//   team.add(magician);
+// });
+
+describe('Создание новой команды', () => {
+  let team = new Team();
+
   team.add(swordsman);
   team.add(magician);
 
@@ -20,15 +24,13 @@ describe('Validator.validateUsername', () => {
 
   test('Дублирование имеющегося персонажа', () => {
     team.add(bowman);
-    expect(() => team.add(bowman)).toThrow('Персонаж уже существует в команде');
+    expect(() => team.add(bowman)).toThrow("Персонаж уже существует в команде");
   });
 })
 
-describe('Validator.validateUsername', () => {
-  const bowman = 'Лучник';
-  const swordsman = 'Мечник';
-  const magician = 'Маг';
-  
+describe('Массовое создание команды', () => {
+  let team = new Team();
+
   team.add(swordsman);
   team.add(magician);
 
@@ -41,11 +43,11 @@ describe('Validator.validateUsername', () => {
     expect(team.members.has(bowman)).toBe(true);
   });
 
-test('Добавление нескольких персонажей', () => {
+  test('Добавление нескольких персонажей', () => {
     expect(team.members.has(swordsman)).toBe(true);
   });
 
-test('Добавление нескольких персонажей', () => {
+  test('Добавление нескольких персонажей', () => {
     expect(team.members.has(magician)).toBe(true);
   });
 
