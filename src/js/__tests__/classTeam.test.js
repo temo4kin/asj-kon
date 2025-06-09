@@ -16,7 +16,7 @@ describe('Validator.validateUsername', () => {
 
   test('Дублирование имеющегося персонажа', () => {
     team.add(bowman);
-    expect(() => team.add(bowman)).toThrow('Такой персонаж уже есть в команде');
+    expect(() => team.add(bowman)).toThrow('Персонаж уже существует в команде');
   });
 
   test('Добавление нескольких персонажей', () => {
